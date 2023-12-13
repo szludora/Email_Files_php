@@ -13,7 +13,7 @@ class FileController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'file' => 'required|mimes:txt,pdf,xlx,csv|max:2048',
+            'file' => 'required|mimes:txt,pdf,xlx,csv,png,jpg,jpeg,mp3,mp4|max:2048',
         ]);
         //ha eredeti nevét megtartanád, a jobb oldalon legyen: $request->file->getClientOriginalName();
         $fileName = time() . '.' . $request->file->extension();
