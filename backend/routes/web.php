@@ -1,5 +1,6 @@
 <?php
-
+use App\Http\Controllers\FileController;
+use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('send_mail', [MailController::class, 'index']);
+Route::get('file_upload', [FileController::class, 'index']);
+Route::post('file_upload', [FileController::class, 'store'])->name('file.store');
