@@ -12,7 +12,7 @@ class MailController extends Controller
     {
         $mailData = [
             // title, body --> blade hivatkozik rá
-            'title' => 'Mail from your_email.com',
+            'title' => 'FOREACH :D Mail from your_email.com',
             'body' => 'This is for testing email using smtp.'
         ];
 
